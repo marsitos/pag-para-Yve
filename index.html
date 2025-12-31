@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Yvely ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hearts-container"></div>
+        <div class="hero-content glass">
+            <h1>Para la preciosa que hace feliz mis días</h1>
+            <p>Página dedicada a mostrar lo que siento por ti</p>
+            <span class="scroll-indicator">↓</span>
+        </div>
+    </section>
+
+    <section class="feelings-section">
+        <h2 id="feelingsTrigger">Cómo me haces sentir</h2>
+
+        <div id="heartsBox" class="hidden">
+            <div id="physicsContainer"></div>
+        </div>
+    </section>
+
+    <section class="story-section" id="story">
+    <h2>Nuestra historia</h2>
+    <p class="subtitle">Momentos que guardo con cariño</p>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <span class="date">El día que te conocí</span>
+            <p>Sin saberlo, ese día empezó algo muy bonito para mí.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="date">Nuestra primera salida</span>
+            <p>Me di cuenta de lo fácil que era sonreír contigo.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="date">Risas que no olvido</span>
+            <p>Momentos simples que se volvieron especiales solo por estar contigo.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="date">Hoy</span>
+            <p>Sigo con ganas de seguir escribiendo esta historia contigo.</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="album-section locked" id="album">
+        <!-- BLOQUEO -->
+    <div class="album-lock" id="albumLock">
+        <h2>Un pequeño secreto</h2>
+        <p class="subtitle">Solo alguien especial puede ver estos recuerdos 💌</p>
+
+        <div class="lock-box">
+            <input 
+                type="password" 
+                id="albumPassword" 
+                placeholder="Ingresa la contraseña"
+            >
+            <button onclick="unlockAlbum()">Entrar</button>
+            <p class="lock-message" id="lockMessage"></p>
+        </div>
+    </div>
+    <h2>Nuestros recuerdos</h2>
+    <p class="subtitle">Cada foto guarda un momento contigo</p>
+
+    <div class="album-grid">
+        <div class="day-card" onclick="openDay('day1')">
+            <span class="day-date">19 de noviembre 2025</span>
+            <p>Recién empezamos a agarrarnos confianza 💕</p>
+        </div>
+
+        <div class="day-card" onclick="openDay('day2')">
+            <span class="day-date">21 de noviembre 2025</span>
+            <p>Nuestro primer beso</p>
+        </div>
+
+        <div class="day-card" onclick="openDay('day3')">
+            <span class="day-date">7 de diciembre 2025</span>
+            <p>Primera cita🩷</p>
+        </div>
+
+        <div class="day-card" onclick="openDay('day4')">
+            <span class="day-date">9 de diciembre 2025</span>
+            <p>Mi primer cumpleaños contigo🥰</p>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL -->
+<div class="day-modal" id="dayModal">
+    <span class="close" onclick="closeDay()">×</span>
+    <h3 id="dayTitle"></h3>
+
+    <div class="day-photos" id="dayPhotos"></div>
+</div>
+
+
+
+    <script src="js/main.js"></script>
+    <audio id="bg-music" loop></audio>
+
+    <button class="music-btn" aria-label="Reproducir música">
+    🎵
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
