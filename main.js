@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const randomSong = playlist[Math.floor(Math.random() * playlist.length)];
     music.src = randomSong;
-    music.volume = 0.1;
+    music.volume = 0.3;
 
     let isPlaying = false;
 
