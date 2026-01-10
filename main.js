@@ -1,21 +1,24 @@
 const heartsContainer = document.querySelector('.hearts-container');
-
+const isMobile = window.innerWidth < 768;
 const numberOfHearts = 12;
 
 for (let i = 0; i < numberOfHearts; i++) {
     const heart = document.createElement('div');
     heart.classList.add('heart');
-
-    heart.style.left = Math.random() * 100 + '%';
+    const margin = 10;
+    heart.style.left = margin + Math.random() * (100 - margin * 2) + '%';
     heart.style.animationDuration = 8 + Math.random() * 5 + 's';
     heart.style.animationDelay = Math.random() * 5 + 's';
-    heart.style.transform = `scale(${0.6 + Math.random()}) rotate(45deg)`;
+    heart.style.transform = `scale(${isMobile ? 0.5 : 0.7 + Math.random()}) rotate(45deg)`;
+
 
     heartsContainer.appendChild(heart);
 }
-document.addEventListener("touchend", createTapHeart);
-document.addEventListener("click", createTapHeart);
-
+if ("ontouchstart" in window) {
+    document.addEventListener("touchend", createTapHeart);
+} else {
+    document.addEventListener("click", createTapHeart);
+}
 function createTapHeart(e) {
     const heart = document.createElement("div");
     heart.classList.add("tap-heart");
