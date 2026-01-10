@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const randomSong = playlist[Math.floor(Math.random() * playlist.length)];
     music.src = randomSong;
-    music.volume = 0.05;
+    music.volume = 0.1;
 
     let isPlaying = false;
 
@@ -80,16 +80,40 @@ const {
     Mouse,
     MouseConstraint
 } = Matter;
-
+let mouseConstraint = null;
 let engine = null;
 let render = null;
 
 const messages = [
-    "Me haces sonreír sin darme cuenta",
-    "Contigo todo se siente más tranquilo",
-    "Me gusta cómo me miras",
-    "Me haces sentir en casa",
-    "Me haces bien"
+    "Me encantas mucho",
+    "Me gusta cuando me molestas",
+    "Me gusta cuando te enojas",
+    "Me gustan mucho tus abrazos",
+    "Me gusta mucho que me beses",
+    "Me gusta mucho que seas tierna de vez en cuando",
+    "Me gusta darte besitos en toda tu carita",
+    "Me gusta contarte mis buenisimos chistes",
+    "Me gusta cuando te ríes de mis buenisimos chistes",
+    "Me gusta molestarte mucho",
+    "Me gusta cuando de pones a silvar de la nada",
+    "Me gusta tu forma de ser conmigo",
+    "Me gustas tú en general",
+    "Me gusta que tengas iniciativa",
+    "Me gusta cuando me haces bromas",
+    "Me gusta gustarte",
+    "Me gusta sentirte",
+    "Me gusta quererte",
+    "Me gustan tus detalles",
+    "Me gusta verte",
+    "Cada día te quiero conocer más y más",
+    "Me gusta tu forma inquieta de ser a veces",
+    "Quiero pasar contigo mucho tiempo más",
+    "Me gusta escucharte hablar de las cosas que te gustan aunque no las entienda",
+    "Me gusta pasar tiempo contigo",
+    "Me gusta mucho tu voz",
+    "Espero algún día no muy lejano tengamos un viaje corto",
+    "Si lees esto quiero que sepas que me gustas mucho"
+
 ];
 
 document.getElementById("feelingsTrigger").addEventListener("click", () => {
@@ -176,7 +200,7 @@ document.getElementById("feelingsTrigger").addEventListener("click", () => {
                     body.opened = true;
                     body.render.sprite.texture = "assets/img/heart-read.png";
                 }
-                showHeartMessage(body.message);
+                showHeartModal(body.message);
             }
         });
     });
@@ -185,25 +209,17 @@ document.getElementById("feelingsTrigger").addEventListener("click", () => {
     Render.run(render);
 });
 
-function showHeartMessage(text) {
-    const msg = document.createElement("div");
-    msg.innerText = text;
-    msg.style.position = "absolute";
-    msg.style.bottom = "10px";
-    msg.style.left = "50%";
-    msg.style.transform = "translateX(-50%)";
-    msg.style.background = "white";
-    msg.style.padding = "0.6rem 1rem";
-    msg.style.borderRadius = "1rem";
-    msg.style.fontSize = "0.85rem";
-    msg.style.boxShadow = "0 5px 15px rgba(0,0,0,0.2)";
+function showHeartModal(text) {
+    const modal = document.getElementById("heartModal");
+    const modalText = document.getElementById("heartModalText");
 
-    const box = document.getElementById("heartsBox");
-    box.appendChild(msg);
-
-    setTimeout(() => msg.remove(), 3000);
+    modalText.innerText = text;
+    modal.classList.remove("hidden");
 }
 
+function closeHeartModal() {
+    document.getElementById("heartModal").classList.add("hidden");
+}
 //----
 const timelineItems = document.querySelectorAll(".timeline-item");
 

@@ -16,7 +16,7 @@
         <div class="hearts-container"></div>
         <div class="hero-content glass">
             <h1>Para la preciosa que hace feliz mis días</h1>
-            <p>Página dedicada a mostrar lo que siento por ti</p>
+            <p>Página dedicada a mostrar y guardar historias</p>
             <span class="scroll-indicator">↓</span>
         </div>
     </section>
@@ -36,22 +36,91 @@
     <div class="timeline">
         <div class="timeline-item">
             <span class="date">El día que te conocí</span>
-            <p>Sin saberlo, ese día empezó algo muy bonito para mí.</p>
+            <p>
+                La primera vez que hablamos fue de todo menos linda la verdad, yo crei que no pasaría nada
+                entre nosotros porque no teníamos química, nos sentíamos incómodos juntos, no sabíamos
+                qué decir o qué hablar.
+            </p>
         </div>
 
         <div class="timeline-item">
-            <span class="date">Nuestra primera salida</span>
-            <p>Me di cuenta de lo fácil que era sonreír contigo.</p>
+            <span class="date">El primer día que me molestaste</span>
+            <p>
+                Después de la fallida primera interacción que tuvimos pasó mucho tiempo para nuestra segunda
+                vez que hablamos, ese día yo no tenía ni la más mínima idea de que hablaríamos con un poco
+                mas de confianza por primera vez, luego empezaste a molestarme como si ya me conocieras,
+                iniciaste nuestras primeras interacciones y charlas cómodas por lo cual yo me interesé en tí.
+            </p>
         </div>
 
         <div class="timeline-item">
-            <span class="date">Risas que no olvido</span>
-            <p>Momentos simples que se volvieron especiales solo por estar contigo.</p>
+            <span class="date">La primera vez que te fui a ver</span>
+            <p>
+                Yo no sabía con qué cara llegar a verte cuando me dijiste "Estamos en la biblioteca", me daba
+                mucha pena entrar por la puerta y ser la primera vez que te vea y vaya a la universidad únicamente
+                para verte.
+            </p>
         </div>
 
         <div class="timeline-item">
-            <span class="date">Hoy</span>
-            <p>Sigo con ganas de seguir escribiendo esta historia contigo.</p>
+            <span class="date">El 26 de noviembre</span>
+            <p>
+                El 26 de noviembre fue un día lindo porque en ese día tuvimos una buena charla donde hablábamos de
+                cosas que nos gustaban, te conocí un poco más y me enamoraste mucho más.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="date">El 28 de noviembre</span>
+            <p>
+                Me gusta recordar este día porque fue la primera foto que tuvimos como una pareja de chicos enamorados,
+                (La vez que nos escribimos unas frases en nuestras manos)
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="date">Nuestra primera cita (7 de diciembre 2025)</span>
+            <p>
+                Recuerdo que yo iba confiado en el carro, yo decía que no me iba a pasar nada cuando te viera por
+                primera vez fuera de la universidad, que sería como un día cualquiera pero al momento en que me dijiste
+                "Ya estoy aquí" el corazón me empezó a latir mucho, no sabía cómo reaccionar al verte no sabía cómo
+                darte el peluche ni en qué momento hacerlo, recuerdo que me contaste que tú también estabas muy
+                nerviosa de verme. Me alegra mucho que ese día haya salido muy bien, vimos la película que a la final
+                tú me terminaste explicando algunas cosas porque eres más fan que yo, recuerdo que mientras te acariciaba
+                te sentía tan cerca mío.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="date">El día de mi cumpleaños</span>
+            <p>
+                Fue un día muy lindo, te ví llegar y verte tan linda que llegué al punto de molestarte
+                a cada rato en que te ibas a ir a otro lado porque fuiste demasiado linda a verme, recuerdo haberte
+                molestado por más de una semana que me contaras lo que me habías comprado de regalo, me gustó mucho
+                molestarte con que lo abriría ahí mismo porque estabas apenada de que lo viera, al final cediste
+                y no supe como reaccionar porque me gustó tanto el regalo, te di un abrazo sincero porque me gustó
+                mucho mucho, me diste a la versión miniatura de tí para llevarte a todos lados en mi mochila, la
+                carta y todas las frases que me escribiste dentro, me gustó mucho la comida de ese día porque fue
+                contigo.
+            </p>
+        </div>
+        
+        <div class="timeline-item">
+            <span class="date">Nuestra tercera cita</span>
+            <p>
+                Lamentablemente de ese día no tengo ninguna foto, pero fuimos a ver avatar 3 y sentí exactamente lo
+                mismo que sentí en la primera cita que tuvimos, me puse muy nervioso de verte aunque ya tuvieramos
+                mucha confianza y tiempo de conocernos. La película estaba muy buena aunque yo no recordaba
+                mucho sobre la segunda pero me hacías recordar porque a ti te gusta mucho avatar. Me gustó conocerte
+                más porque ese día te ví reaccionar de manera inquieta sobre algo que te gustaba mucho.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <span class="date">La primera vez que llegaste a mi casa</span>
+            <p>
+                Recuerdo que 
+            </p>
         </div>
         </div>
     </section>
@@ -60,7 +129,7 @@
         <!-- BLOQUEO -->
     <div class="album-lock" id="albumLock">
         <h2>Un pequeño secreto</h2>
-        <p class="subtitle">Solo alguien especial puede ver estos recuerdos 💌</p>
+        <p class="subtitle">Solo con contraseña💌</p>
 
         <div class="lock-box">
             <input 
@@ -116,5 +185,13 @@
     </button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script src="main.js"></script>
+
+    <div id="heartModal" class="heart-modal hidden">
+  <div class="heart-modal-content">
+    <button class="close-modal" onclick="closeHeartModal(event)">✕</button>
+    <p id="heartModalText"></p>
+  </div>
+</div>
+
 </body>
 </html>
