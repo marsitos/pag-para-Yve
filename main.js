@@ -218,6 +218,9 @@ function showHeartMessage(text) {
     bar._timer = setTimeout(() => {
         bar.classList.remove("show");
     }, 2500);
+    if (navigator.vibrate) {
+    navigator.vibrate(20);
+}
 }
 
 //----
