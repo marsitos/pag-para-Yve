@@ -201,7 +201,7 @@ document.getElementById("feelingsTrigger").addEventListener("click", () => {
                     body.opened = true;
                     body.render.sprite.texture = "assets/img/heart-read.png";
                 }
-                showHeartModal(body.message);
+                showHeartMessage(body.message);
             }
         });
     });
@@ -209,18 +209,17 @@ document.getElementById("feelingsTrigger").addEventListener("click", () => {
     Engine.run(engine);
     Render.run(render);
 });
+function showHeartMessage(text) {
+    const bar = document.getElementById("heartMessageBar");
+    bar.textContent = text;
+    bar.classList.add("show");
 
-function showHeartModal(text) {
-    const modal = document.getElementById("heartModal");
-    const modalText = document.getElementById("heartModalText");
-
-    modalText.innerText = text;
-    modal.classList.remove("hidden");
+    clearTimeout(bar._timer);
+    bar._timer = setTimeout(() => {
+        bar.classList.remove("show");
+    }, 2500);
 }
 
-function closeHeartModal() {
-    document.getElementById("heartModal").classList.add("hidden");
-}
 //----
 const timelineItems = document.querySelectorAll(".timeline-item");
 
