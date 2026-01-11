@@ -100,7 +100,7 @@ body {
 }
 /* ===== CORAZONES FLOTANTES ===== */
 .hearts-container {
-    position: relative;
+    position: fixed;
     inset: 0;
     height: 100vh;
     width: 100%;
@@ -722,7 +722,6 @@ body {
     border-radius: 999px;
     font-size: 0.9rem;
     color: #6B4F4F;
-    z-index: 9999;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     opacity: 0;
     pointer-events: none;
