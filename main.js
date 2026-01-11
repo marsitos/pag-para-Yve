@@ -287,9 +287,18 @@ function unlockAlbum() {
 
 const albumDays = {
     day1: {
-        title: "19 de noviembre 2025 💕",
+        title: "Randoms 💕",
         photos: [
-            "assets/photos/19nov2025-1.mp4"
+            "assets/photos/random/19nov2025-1.mp4",
+            "assets/photos/random/r1.jpg",
+            "assets/photos/random/r2.jpg",
+            "assets/photos/random/r3.jpg",
+            "assets/photos/random/r4.jpg",
+            "assets/photos/random/r5.jpg",
+            "assets/photos/random/r6.jpg",
+            "assets/photos/random/r7.jpg",
+            "assets/photos/random/r8.jpg",
+            "assets/photos/random/v1.mp4",
         ]
     },
     day2: {
@@ -318,6 +327,25 @@ const albumDays = {
             "assets/photos/09122025/9dic2025-4.jpg",
             "assets/photos/09122025/9dic2025-5.jpg",
             "assets/photos/09122025/9dic2025-6.jpg"
+        ]
+    },
+    day5: {
+        title: "4 de enero del 2026",
+        photos: [
+            "assets/photos/04012026/i1.jpg",
+            "assets/photos/04012026/i2.jpg",
+            "assets/photos/04012026/i3.jpg",
+            "assets/photos/04012026/i4.jpg",
+            "assets/photos/04012026/v1.mp4"
+        ]
+    },
+    day6: {
+        title: "6 de enero del 2026",
+        photos: [
+            "assets/photos/06012026/i1.jpg",
+            "assets/photos/06012026/i2.jpg",
+            "assets/photos/06012026/i3.jpg",
+            "assets/photos/06012026/v1.mp4"
         ]
     }
 };

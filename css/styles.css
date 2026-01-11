@@ -775,5 +775,5 @@ body {
 #heartMessageBar.show {
     opacity: 1;
     pointer-events: auto;
-    transform: translateX(-50%) translateY(600px);
+    transform: translateX(-50%) translateY(650px);
 }
