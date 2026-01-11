@@ -100,11 +100,12 @@ body {
 }
 /* ===== CORAZONES FLOTANTES ===== */
 .hearts-container {
-    position: absolute;
+    position: relative;
     inset: 0;
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
 .heart {
@@ -693,50 +694,6 @@ body {
     animation: boxEnter 0.8s cubic-bezier(.22,.61,.36,1);
 }
 
-.heart-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    animation: fadeIn 0.3s ease;
-}
-
-.heart-modal.hidden {
-    display: none;
-}
-
-.heart-modal-content {
-    background: #fff;
-    padding: 1.8rem 1.6rem;
-    border-radius: 1.5rem;
-    max-width: 280px;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-    position: relative;
-    animation: popIn 0.35s ease;
-}
-
-.heart-modal-content p {
-    font-size: 1rem;
-    color: #6B4F4F;
-    line-height: 1.4;
-}
-
-.close-modal {
-    position: absolute;
-    top: 0.6rem;
-    right: 0.8rem;
-    border: none;
-    background: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: #C86B85;
-}
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -765,7 +722,7 @@ body {
     border-radius: 999px;
     font-size: 0.9rem;
     color: #6B4F4F;
-
+    z-index: 9999;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     opacity: 0;
     pointer-events: none;
@@ -775,5 +732,6 @@ body {
 #heartMessageBar.show {
     opacity: 1;
     pointer-events: auto;
-    transform: translateX(-50%) translateY(700px);
+    transform: translateX(-50%) translateY(400px);
+    z-index: 9999;
 }
