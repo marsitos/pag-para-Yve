@@ -1,6 +1,6 @@
 const heartsContainer = document.querySelector('.hearts-container');
 const isMobile = window.innerWidth < 768;
-const numberOfHearts = 12;
+const numberOfHearts = 20;
 
 for (let i = 0; i < numberOfHearts; i++) {
     const heart = document.createElement('div');
@@ -103,10 +103,7 @@ const messages = [
     "Me gustas tú en general",
     "Me gusta que tengas iniciativa",
     "Me gusta cuando me haces bromas",
-    "Me gusta gustarte",
-    "Me gusta sentirte",
     "Me gusta quererte",
-    "Me gustan tus detalles",
     "Me gusta verte",
     "Cada día te quiero conocer más y más",
     "Me gusta tu forma inquieta de ser a veces",
@@ -168,8 +165,9 @@ document.getElementById("feelingsTrigger").addEventListener("click", () => {
 
     // corazones
     messages.forEach((msg, i) => {
-        const heart = Bodies.circle(150 + i * 20, 40, 18, {
+        const heart = Bodies.circle(10 + i * 10, 40, 28, {
             restitution: 0.9,
+            frictionAir: 0.03,
             render:{
                 sprite: {
                     texture: "assets/img/heart.png", // imagen de corazón
