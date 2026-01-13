@@ -98,7 +98,7 @@ const messages = [
     "Me gusta contarte mis buenisimos chistes",
     "Me gusta cuando te ríes de mis buenisimos chistes",
     "Me gusta molestarte mucho",
-    "Me gusta cuando de pones a silvar de la nada",
+    "Me gusta cuando te pones a silvar de la nada",
     "Me gusta tu forma de ser conmigo",
     "Me gustas tú en general",
     "Me gusta que tengas iniciativa",
@@ -251,7 +251,7 @@ function closePhoto() {
     document.getElementById("photoModal").style.display = "none";
 }
 
-const CORRECT_PASSWORD = "123"; // cámbiala
+const CORRECT_PASSWORD = "21112025";
 
 function unlockAlbum() {
     const input = document.getElementById("albumPassword").value;
